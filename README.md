@@ -51,6 +51,7 @@ The basic requirements are the following:
  - Has a comments model
  - Displays JSON for all responses
  - Works properly in Postman or PHPStorm Web Service Tools
+ - Created a proper Pull Request to this repository for any changes.
 
 Some extra credit will be assigned if you do any of the following:
  - Import a 3rd Party package such as barryvdh/debugbar or way/generators.
