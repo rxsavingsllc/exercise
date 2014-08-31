@@ -25,7 +25,6 @@ class CommentsController extends \BaseController {
 	 * I just call the users table, loop through until a match, manually authenticate
 	 * the user and then insert a comment with their id as the author id.
 	 *
-	 * Then route back to method index.
 	*/
 	public function store(){  
 
