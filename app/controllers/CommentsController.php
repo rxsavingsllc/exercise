@@ -41,7 +41,9 @@ class CommentsController extends \BaseController {
                 Auth::login($validUser);
             }
         }
-        
+        if (empty(Auth::user()->id))
+            die('user not found');
+            
         $comment = new Comments;
         $comment->author_id = Auth::user()->id;
         $comment->comment = Input::get('comment');
@@ -71,7 +73,7 @@ class CommentsController extends \BaseController {
 	public function update($id)
 	{
 	    if (!Input::has('secret_key', 'comment')){
-            die('not secret key or comment');
+            die('no secret key or comment');
         }
 
         $users = User::all();
@@ -82,12 +84,16 @@ class CommentsController extends \BaseController {
                 $validUser = User::find($user->id);
                 Auth::login($validUser);
             }
+                
         }
         
+        if (empty(Auth::user()->id))
+            die('user not found');
+            
         $comment = Comments::find($id);
-        
+
         if(Auth::user()->id != $comment->author_id)
-            die();
+            die('wrong user');
             
         $comment->comment = Input::get('comment');
         $comment->save();
