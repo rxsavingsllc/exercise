@@ -29,7 +29,7 @@ class CommentsController extends \BaseController {
 	public function store(){  
 
         if (!Input::has('secret_key', 'comment')){
-            dd();
+            die('no secret key or comment');
         }
 
         $users = User::all();
@@ -70,7 +70,25 @@ class CommentsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+	    if (!Input::has('secret_key', 'comment')){
+            die('not secret key or comment');
+        }
+
+        $users = User::all();
+
+        foreach($users as $user){
+
+            if (Hash::check(Input::get('secret_key'), $user->secret_key)){
+                $validUser = User::find($user->id);
+                Auth::login($validUser);
+            }
+        }
+        
         $comment = Comments::find($id);
+        
+        if(Auth::user()->id != $comment->author_id)
+            die();
+            
         $comment->comment = Input::get('comment');
         $comment->save();
 	}
