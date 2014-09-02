@@ -1,10 +1,14 @@
-###Rx Savings Solutions Software Engineer Exercise
+###Rx Savings Solutions - Catching Up Exercise #1
 <br />
-Please do the following before getting started:
+
+<br />This is an exercise for current hired Engineers at Rx Savings Solutions in order to catch up with the next gen development. These will come in every two weeks with a new lesson for you to follow along, as well as a Laracast video that I recommend you watch. These aren't being tested, but I will like you to fork this to a repo in GitHub and place you work in it so I can review and recommend different things.
+
+***Please do the following before getting started:***
 
  - Fork this repository to your own Github account.
  - Make sure you have some sort  of local testing environment like WAMP/MAMP or a virtual machine.
- - Read this Readme for what the exercise is and what we expect from our candidates
+ - [Read the Laravel Cheatsheet](https://github.com/rxsavingsllc/rxsavings/wiki/The-Laravel-Cheatsheet)
+ - [Install Vagrant and Laravel Homestead](https://github.com/rxsavingsllc/rxsavings/wiki/Vagrant) - This will take some time to do and is slightly complicated because it is a new way to develop. This completely replaces the need for WAMP/MAMP and gives us a platform/server agnostic way to develop our sites.
 
 This exercise is focused solely on your understanding what a RESTful API is and how you communicate with it. We are hosting this on Github so we can make sure you are able to work in our environment and understand the basics of working with Git/hub.
 
@@ -51,7 +55,6 @@ The basic requirements are the following:
  - Has a comments model
  - Displays JSON for all responses
  - Works properly in Postman or PHPStorm Web Service Tools
- - Created a proper Pull Request to this repository for any changes.
 
 Some extra credit will be assigned if you do any of the following:
  - Import a 3rd Party package such as barryvdh/debugbar or way/generators.
