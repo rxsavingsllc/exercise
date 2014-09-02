@@ -61,3 +61,7 @@ Some extra credit will be assigned if you do any of the following:
  - Commented properly using the standard DocBlock format.
  - Any continuing work that would add the following features: delete comment, edit comment, like comment.
  - Any work that involves paging the JSON object for better response.
+
+Recommended Post-Exercise Reading/Laracasts:
+ - [Understanding REST - Laracasts](https://laracasts.com/lessons/understanding-rest)
+ - [Laravel 4: A Start at a RESTful API](http://code.tutsplus.com/tutorials/laravel-4-a-start-at-a-restful-api-updated--net-29785)
