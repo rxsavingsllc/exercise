@@ -35,7 +35,7 @@ Create a Comments model and using the `index` method in CommentsController, crea
 ####Exercise #4
 Using the Comments model, User model and CommentsController's appropriate method to do the following:
  - Take a normal POST request data using Laravel's Input facade.
- - Authenticate the user with the `secret_key` column.
+ - Authenticate the user with the `secret_key` column. The `secret_key` column is a unique key that can be considered like a password, auth key, or api key. It is a very primitive form of authentication, but will do for this exercise.
  - Insert a new comment with the authenticated user.
 
 ----
