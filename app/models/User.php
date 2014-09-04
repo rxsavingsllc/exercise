@@ -22,5 +22,28 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
+    //protected $guarded = array('secret_key');
+
+
+    public function getAuthPassword()
+    {
+        return $this->attributes['secret_key'];
+    }
+
+    public function getFullNameAttribute()
+    {
+        return $this->attributes['first_name'] . ' ' . $this->attributes['last_name'];
+    }
+
+    /**
+     * Check whether the current user is the author of a comment
+     *
+     * @param Comment $comment
+     * @return bool
+     */
+    public function isAuthor(Comment $comment)
+    {
+        return $comment->author_id == $this->attributes['id'];
+    }
 
 }

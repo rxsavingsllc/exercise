@@ -45,6 +45,17 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
+App::error(function(ModelNotFoundException $e)
+{
+    if(Request::wantsJson())
+    {
+        return Response::json(array('status'=>'failed', 'message'=>'An object of that id does not exist.'));
+    }
+
+    return Response::json(array('status'=>'failed', 'message'=>"You didn't ask for JSON so normally you'd be getting view."));
+});
 
 App::error(function(Exception $exception, $code)
 {
