@@ -51,10 +51,10 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'exercise',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'Mk33pdt7g!',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => 'Mk33pdt7g!',
+			'prefix'    => '',
 		)
 
 	),
